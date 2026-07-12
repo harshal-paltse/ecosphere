@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgDark"
+    android:padding="20dp">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/leaderboard_title"
+        android:textColor="@color/textWhite"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Area title (dynamic) -->
+    <TextView
+        android:id="@+id/tvAreaTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/greenNavActive"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Area filter spinner -->
+    <Spinner
+        android:id="@+id/spinnerAreaFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/area_list"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Leaderboard list -->
+    <ListView
+        android:id="@+id/listLeaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/colorAccent"
+        android:dividerHeight="1dp"/>
+
+    <!-- Empty state -->
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/leaderboard_empty"
+        android:textColor="@color/textSecondaryLight"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:layout_marginTop="40dp"/>
+
+    <!-- Back button -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="← Back"
+        android:backgroundTint="@color/btnGreen"
+        android:textColor="@color/btnText"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>
